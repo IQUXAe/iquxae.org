@@ -3,94 +3,61 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#eee] dark:bg-[#202626] py-12 mt-auto text-gray-600 dark:text-gray-400 transition-colors duration-300">
-      <div className="container mx-auto px-4 max-w-[1140px]">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
-          {/* Column 1 - Services */}
+    <footer style={{
+      background: '#f5f5f5',
+      padding: '60px 0 30px',
+      marginTop: 'auto'
+    }}>
+      <div className="container">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '40px',
+          marginBottom: '40px'
+        }}>
           <div>
-            <h4 className="text-[1.125rem] font-light mb-[15px] dark:text-gray-200">Services</h4>
-            <ul className="list-none p-0 space-y-3">
-              <li>
-                <Link to="/matrix" className="text-primary hover:text-[#12676a] dark:hover:text-white transition-colors text-base font-light">
-                  Matrix
-                </Link>
-              </li>
-              <li>
-                <Link to="/quikxchat" className="text-primary hover:text-[#12676a] dark:hover:text-white transition-colors text-base font-light">
-                  QuikxChat
-                </Link>
-              </li>
-            </ul>
+            <h4 style={{ fontSize: '16px', fontWeight: 500, marginBottom: '15px' }}>Services</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <Link to="/matrix">Matrix</Link>
+              <Link to="/quikxchat">QuikxChat</Link>
+            </div>
           </div>
 
-          {/* Column 2 - Community */}
           <div>
-            <h4 className="text-[1.125rem] font-light mb-[15px] dark:text-gray-200">Community</h4>
-            <ul className="list-none p-0 space-y-3">
-              <li>
-                <a 
-                  href="https://github.com/IQUXAe" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-primary hover:text-[#12676a] dark:hover:text-white transition-colors text-base font-light"
-                >
-                  GitHub
-                </a>
-              </li>
-            </ul>
+            <h4 style={{ fontSize: '16px', fontWeight: 500, marginBottom: '15px' }}>Community</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <a href="https://github.com/IQUXAe" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
 
-          {/* Column 3 - Support */}
           <div>
-            <h4 className="text-[1.125rem] font-light mb-[15px] dark:text-gray-200">Support</h4>
-            <ul className="list-none p-0 space-y-3">
-              <li>
-                <Link to="/donate" className="text-primary hover:text-[#12676a] dark:hover:text-white transition-colors text-base font-light">
-                  Donate
-                </Link>
-              </li>
-            </ul>
+            <h4 style={{ fontSize: '16px', fontWeight: 500, marginBottom: '15px' }}>Support</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <Link to="/donate">Donate</Link>
+            </div>
           </div>
 
-          {/* Column 4 - Legal */}
           <div>
-            <h4 className="text-[1.125rem] font-light mb-[15px] dark:text-gray-200">Legal</h4>
-            <ul className="list-none p-0 space-y-3 mb-6">
-              <li>
-                <Link to="/legal" className="text-primary hover:text-[#12676a] dark:hover:text-white transition-colors text-base font-light">
-                  Terms & Privacy
-                </Link>
-              </li>
-            </ul>
-            <div className="flex items-center gap-3 mb-4 text-primary">
-                {/* Logo SVG */}
-                <svg 
-                  className="h-8 w-8" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="1.8" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2l9 4.9V17l-9 4.9L3 17V6.9l9-4.9z" />
-                  <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
-                </svg>
-                <div className="flex flex-col leading-none">
-                  <span className="text-[1.1rem] font-bold tracking-tight">IQUXAe</span>
-                  <span className="text-[0.65rem] tracking-[0.2em] uppercase font-light opacity-80">.org</span>
-                </div>
-             </div>
-             <p className="text-[0.875rem] mb-2 leading-relaxed font-light">
-               &copy; 2025 IQUXAe <br/>
-               All rights reserved.
-             </p>
-             <p className="text-[0.75rem] opacity-70 mt-2">
-               Designed with privacy in mind.
-             </p>
+            <h4 style={{ fontSize: '16px', fontWeight: 500, marginBottom: '15px' }}>Legal</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <Link to="/legal">Terms & Privacy</Link>
+            </div>
           </div>
+        </div>
 
+        <div style={{
+          borderTop: '1px solid #ddd',
+          paddingTop: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          fontSize: '14px',
+          color: '#666'
+        }}>
+          <svg width="32" height="16" viewBox="0 0 48 24" fill="#167C80">
+            <path d="M40,12a4,4,0,0,0-3,1.33l-.23-.09A29.62,29.62,0,0,0,32,11.81h0a8,8,0,0,0-16,0l-.22,0a29.53,29.53,0,0,0-4.6,1.39l-.23.09a4,4,0,1,0,.93,1.78h0a27.62,27.62,0,0,1,4.29-1.29,8,8,0,0,0,15.57,0,27.55,27.55,0,0,1,4.29,1.28h0A4,4,0,1,0,40,12ZM8,18a2,2,0,1,1,2-2A2,2,0,0,1,8,18Zm16,0a6,6,0,1,1,6-6A6,6,0,0,1,24,18Zm16,0a2,2,0,1,1,2-2A2,2,0,0,1,40,18ZM27,12a3,3,0,1,1-3-3A3,3,0,0,1,27,12Z"/>
+          </svg>
+          <span>© 2025 IQUXAe.org</span>
         </div>
       </div>
     </footer>

@@ -1,107 +1,113 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import Button from '../components/Button';
-import { Server, MessageCircle, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-[#1b1f27] transition-colors duration-300">
-      <Hero 
-        title="IQUXAe.org"
-        subtitle={
-          <div className="flex flex-col gap-4 items-center animate-fade-in">
-            <p>Private services & open-source projects for the digital age</p>
-            <p className="text-[0.75rem] font-medium uppercase tracking-widest opacity-80 mt-2">
-              Matrix homeserver • QuikxChat • Personal playground
-            </p>
+    <>
+      {/* Hero */}
+      <section style={{
+        background: 'linear-gradient(135deg, #167C80 0%, #12676a 100%)',
+        color: '#fff',
+        padding: '120px 0 80px',
+        textAlign: 'center'
+      }}>
+        <div className="container">
+          <h1 style={{ marginBottom: '20px', fontSize: '3.5rem' }}>IQUXAe.org</h1>
+          <p style={{ fontSize: '1.25rem', fontWeight: 300, marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
+            Privacy-focused services and open-source projects
+          </p>
+          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/matrix" className="btn">Get Started</Link>
+            <a href="https://github.com/IQUXAe" className="btn btn-secondary" style={{ color: '#fff', borderColor: '#fff' }}>GitHub</a>
           </div>
-        }
-        fullHeight={true}
-      />
-
-      <section className="py-12 bg-gray-50 dark:bg-[#1b1f27] -mt-16 relative z-20 transition-colors duration-300">
-        <div className="container mx-auto px-4 max-w-[1140px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            {/* Matrix Card */}
-            <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material hover:shadow-material-hover transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1">
-              <div className="p-6 flex-grow">
-                <div className="flex items-center justify-center mb-6 mt-2">
-                   <div className="p-4 bg-gray-100 dark:bg-[#202626] rounded-full text-primary transition-colors">
-                      <Server size={32} />
-                   </div>
-                </div>
-                <h3 className="text-[1.5625rem] font-light text-center text-gray-800 dark:text-white mb-3">Matrix</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-center mb-4 font-light leading-relaxed">
-                  Decentralized, secure communication network. Private homeserver ensuring your metadata and conversations remain strictly yours.
-                </p>
-              </div>
-              <div className="px-6 pb-6 text-center">
-                 <Button to="/matrix">
-                    Learn more
-                 </Button>
-              </div>
-            </div>
-
-            {/* QuikxChat Card */}
-            <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material hover:shadow-material-hover transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1">
-              <div className="p-6 flex-grow">
-                <div className="flex items-center justify-center mb-6 mt-2">
-                   <div className="p-4 bg-gray-100 dark:bg-[#202626] rounded-full text-blue-500 dark:text-blue-400 transition-colors">
-                      <MessageCircle size={32} />
-                   </div>
-                </div>
-                <h3 className="text-[1.5625rem] font-light text-center text-gray-800 dark:text-white mb-3">QuikxChat</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-center mb-4 font-light leading-relaxed">
-                  Flutter-based mobile application built on Matrix protocol. Optimized for speed, minimalism, and efficient resource usage.
-                </p>
-              </div>
-              <div className="px-6 pb-6 text-center">
-                 <Button to="/quikxchat">
-                    Explore
-                 </Button>
-              </div>
-            </div>
-
-            {/* Donate Card */}
-            <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material hover:shadow-material-hover transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1">
-              <div className="p-6 flex-grow">
-                 <div className="flex items-center justify-center mb-6 mt-2">
-                   <div className="p-4 bg-gray-100 dark:bg-[#202626] rounded-full text-pink-500 dark:text-pink-400 transition-colors">
-                      <Heart size={32} />
-                   </div>
-                </div>
-                <h3 className="text-[1.5625rem] font-light text-center text-gray-800 dark:text-white mb-3">Donate</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-center mb-4 font-light leading-relaxed">
-                  Independent hobby project. Your support covers server hosting costs and enables continued open-source development.
-                </p>
-              </div>
-              <div className="px-6 pb-6 text-center">
-                 <Button to="/donate">
-                    Support Us
-                 </Button>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Added "Latest News" or "Updates" section to fill space like LineageOS */}
-          <div className="mt-16">
-            <h2 className="text-[2.25rem] text-gray-800 dark:text-white font-light mb-6">Latest Updates</h2>
-            <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-6 md:p-8">
-               <h3 className="text-xl text-primary font-normal mb-2">Website Redesign Complete</h3>
-               <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">November 2025</p>
-               <p className="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
-                 IQUXAe.org has been redesigned with a clean, modern interface inspired by LineageOS. 
-                 The new design emphasizes simplicity and readability while maintaining full functionality. 
-                 We've also improved mobile responsiveness and added dark mode support throughout the site.
-               </p>
-            </div>
-          </div>
-
         </div>
       </section>
-    </div>
+
+      {/* Features */}
+      <section className="section">
+        <div className="container">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '30px'
+          }}>
+            <div style={{
+              padding: '40px 30px',
+              background: '#fff',
+              borderRadius: '8px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              transition: 'transform 0.3s, box-shadow 0.3s'
+            }} className="feature-card">
+              <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔒</div>
+              <h3 style={{ marginBottom: '15px', fontSize: '1.5rem' }}>Matrix Homeserver</h3>
+              <p style={{ color: '#666', marginBottom: '20px', lineHeight: 1.6 }}>
+                Private Matrix homeserver with end-to-end encryption and federation support
+              </p>
+              <Link to="/matrix" style={{ fontSize: '14px', fontWeight: 500 }}>Learn more →</Link>
+            </div>
+
+            <div style={{
+              padding: '40px 30px',
+              background: '#fff',
+              borderRadius: '8px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              transition: 'transform 0.3s, box-shadow 0.3s'
+            }} className="feature-card">
+              <div style={{ fontSize: '48px', marginBottom: '20px' }}>💬</div>
+              <h3 style={{ marginBottom: '15px', fontSize: '1.5rem' }}>QuikxChat</h3>
+              <p style={{ color: '#666', marginBottom: '20px', lineHeight: 1.6 }}>
+                Flutter-based Matrix client focused on speed and simplicity
+              </p>
+              <Link to="/quikxchat" style={{ fontSize: '14px', fontWeight: 500 }}>Explore →</Link>
+            </div>
+
+            <div style={{
+              padding: '40px 30px',
+              background: '#fff',
+              borderRadius: '8px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              transition: 'transform 0.3s, box-shadow 0.3s'
+            }} className="feature-card">
+              <div style={{ fontSize: '48px', marginBottom: '20px' }}>❤️</div>
+              <h3 style={{ marginBottom: '15px', fontSize: '1.5rem' }}>Support</h3>
+              <p style={{ color: '#666', marginBottom: '20px', lineHeight: 1.6 }}>
+                Help keep the servers running and support open-source development
+              </p>
+              <Link to="/donate" style={{ fontSize: '14px', fontWeight: 500 }}>Donate →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Update */}
+      <section className="section bg-light">
+        <div className="container">
+          <h2 style={{ marginBottom: '40px', textAlign: 'center' }}>Latest Updates</h2>
+          <div style={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            padding: '40px',
+            background: '#fff',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+          }}>
+            <h3 style={{ color: '#167C80', marginBottom: '10px' }}>Website Redesign</h3>
+            <p style={{ fontSize: '14px', color: '#999', marginBottom: '20px' }}>November 2025</p>
+            <p style={{ color: '#666', lineHeight: 1.8 }}>
+              IQUXAe.org has been redesigned with a clean, minimal interface inspired by LineageOS. 
+              The new design emphasizes simplicity and readability while maintaining full functionality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <style>{`
+        .feature-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.15) !important;
+        }
+      `}</style>
+    </>
   );
 };
 

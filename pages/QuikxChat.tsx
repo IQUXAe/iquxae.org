@@ -1,63 +1,57 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import Button from '../components/Button';
-import { Github, Zap, Code, Layout } from 'lucide-react';
 
 const QuikxChat: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#1b1f27] pb-16 transition-colors duration-300">
-      <Hero 
-        title="QuikxChat" 
-        subtitle="Lightweight real-time chat layer built on the Matrix protocol."
-      />
-      
-      <div className="container mx-auto px-4 max-w-[960px]">
-        
-        {/* Main Intro Card */}
-        <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8 md:p-12 text-center mb-12">
-          <div className="inline-flex items-center justify-center p-4 bg-blue-50 dark:bg-blue-500/10 rounded-full text-blue-500 dark:text-blue-400 mb-6">
-            <Zap size={48} strokeWidth={1.5} />
+    <>
+      <section style={{ background: '#167C80', color: '#fff', padding: '80px 0', textAlign: 'center' }}>
+        <div className="container">
+          <h1 style={{ marginBottom: '15px' }}>QuikxChat</h1>
+          <p style={{ fontSize: '1.125rem', fontWeight: 300 }}>Lightweight Matrix client</p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
+          <div style={{ marginBottom: '50px' }}>
+            <div style={{ fontSize: '64px', marginBottom: '30px' }}>⚡</div>
+            <h2 style={{ marginBottom: '20px' }}>Fast. Simple. Open.</h2>
+            <p style={{ color: '#666', fontSize: '1.125rem', lineHeight: 1.8, maxWidth: '600px', margin: '0 auto 30px' }}>
+              QuikxChat is a Flutter-based Matrix client focused on speed and simplicity. Built to provide essential communication features without the bloat.
+            </p>
+            <a href="https://github.com/IQUXAe" className="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
-          
-          <h2 className="text-[2.25rem] leading-[1.5em] text-gray-800 dark:text-white font-light mb-6">Fast. Simple. Open.</h2>
-          
-          <p className="text-[1.1875rem] leading-[1.75rem] text-gray-600 dark:text-gray-300 font-light mb-8 max-w-2xl mx-auto">
-            QuikxChat is a Flutter-based Matrix client focused on speed and simplicity. Built to provide essential communication features without the bloat of traditional clients.
-          </p>
 
-          <Button 
-            href="https://github.com/IQUXAe" 
-          >
-            <Github size={16} className="mr-2" />
-            Source code and updates
-          </Button>
-        </div>
-
-        {/* Feature Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8">
-               <div className="mb-4 text-primary">
-                 <Code size={32} />
-               </div>
-               <h3 className="text-xl text-gray-800 dark:text-white font-normal mb-3">Developer Focused</h3>
-               <p className="text-gray-600 dark:text-gray-400 font-light">
-                 Built with Flutter and matrix-dart-sdk for cross-platform compatibility. Clean architecture enables easy customization and extension.
-               </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'left' }}>
+            <div style={{ padding: '30px', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+              <div style={{ fontSize: '32px', marginBottom: '15px' }}>💻</div>
+              <h3 style={{ marginBottom: '10px', fontSize: '1.125rem' }}>Developer Focused</h3>
+              <p style={{ color: '#666', fontSize: '14px', lineHeight: 1.6 }}>
+                Built with Flutter and matrix-dart-sdk for cross-platform compatibility.
+              </p>
             </div>
 
-            <div className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8">
-               <div className="mb-4 text-primary">
-                 <Layout size={32} />
-               </div>
-               <h3 className="text-xl text-gray-800 dark:text-white font-normal mb-3">Minimalist UI</h3>
-               <p className="text-gray-600 dark:text-gray-400 font-light">
-                 Distraction-free interface focused on conversations. Minimal resource usage with fast load times and smooth animations.
-               </p>
+            <div style={{ padding: '30px', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+              <div style={{ fontSize: '32px', marginBottom: '15px' }}>🎨</div>
+              <h3 style={{ marginBottom: '10px', fontSize: '1.125rem' }}>Minimalist UI</h3>
+              <p style={{ color: '#666', fontSize: '14px', lineHeight: 1.6 }}>
+                Distraction-free interface focused on conversations with minimal resource usage.
+              </p>
             </div>
-        </div>
+          </div>
 
-      </div>
-    </div>
+          <div style={{ marginTop: '50px', padding: '40px', background: '#f5f5f5', borderRadius: '8px' }}>
+            <h3 style={{ marginBottom: '20px' }}>Technical Details</h3>
+            <ul style={{ textAlign: 'left', color: '#666', lineHeight: 2, listStyle: 'none', padding: 0 }}>
+              <li><strong>Built with:</strong> Flutter for cross-platform mobile development</li>
+              <li><strong>Matrix SDK:</strong> matrix-dart-sdk for Matrix protocol integration</li>
+              <li><strong>Encryption:</strong> Supports end-to-end encryption via Olm/Megolm</li>
+              <li><strong>Federation:</strong> Compatible with any Matrix homeserver</li>
+              <li><strong>Platforms:</strong> Android and iOS support</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

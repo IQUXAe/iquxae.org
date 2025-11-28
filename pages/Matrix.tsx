@@ -1,94 +1,65 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import Button from '../components/Button';
-import { ExternalLink, Shield, Globe, Users } from 'lucide-react';
 
 const Matrix: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#1b1f27] pb-16 transition-colors duration-300">
-      <Hero 
-        title="Private Matrix Homeserver" 
-        subtitle="Secure, decentralized communication infrastructure."
-      />
-      
-      <div className="container mx-auto px-4 max-w-[1140px]">
-        
-        {/* Registration Section */}
-        <section className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8 mb-8 border-l-[5px] border-primary transform transition-all hover:shadow-material-hover">
-          <h2 className="text-[2.25rem] leading-[1.5em] text-gray-800 dark:text-white font-light mb-4 mt-0">Registration Policy</h2>
-          <p className="text-[1.1875rem] leading-[1.75rem] text-gray-600 dark:text-gray-300 font-light mb-4">
-            IQUXAe.org operates a private Matrix homeserver. Registration is by invitation only to maintain service quality, prevent abuse, and ensure a secure environment for community members.
-          </p>
-          <p className="text-[1rem] text-gray-500 dark:text-gray-400 font-light">
-            To request access, contact us via email at iquxae@proton.me with your desired username and reason for joining.
-          </p>
-        </section>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          
-          {/* Web Client */}
-          <section className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8 flex flex-col h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <Globe className="text-primary" size={28} />
-              <h2 className="text-[2.25rem] leading-[1.5em] text-gray-800 dark:text-white font-light mt-0">Web Client</h2>
-            </div>
-            <p className="text-[1rem] text-gray-600 dark:text-gray-400 mb-6 font-light leading-relaxed flex-grow">
-              Self-hosted Element Web instance optimized for IQUXAe homeserver. 
-              Access full Matrix features including encrypted messaging, voice calls, and file sharing directly in your browser.
-            </p>
-            <div>
-              <Button 
-                href="https://element.iquxae.org" 
-              >
-                Launch Web Client
-              </Button>
-            </div>
-          </section>
-
-          {/* How to join */}
-          <section className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8 flex flex-col h-full">
-             <div className="flex items-center gap-3 mb-4">
-               <Users className="text-primary" size={28} />
-               <h2 className="text-[2.25rem] leading-[1.5em] text-gray-800 dark:text-white font-light mt-0">Join the Community</h2>
-             </div>
-             <p className="text-[1rem] text-gray-600 dark:text-gray-400 mb-6 font-light leading-relaxed flex-grow">
-               Interested in joining? Contribute to our open-source projects on GitHub, report issues, or reach out via email to introduce yourself and request access.
-             </p>
-             <div>
-               <Button 
-                 href="https://github.com/IQUXAe"
-               >
-                 Visit GitHub
-               </Button>
-             </div>
-          </section>
-
+    <>
+      <section style={{ background: '#167C80', color: '#fff', padding: '80px 0', textAlign: 'center' }}>
+        <div className="container">
+          <h1 style={{ marginBottom: '15px' }}>Matrix Homeserver</h1>
+          <p style={{ fontSize: '1.125rem', fontWeight: 300 }}>Secure, decentralized communication</p>
         </div>
+      </section>
 
-        {/* Technical Details / Why Matrix */}
-        <section className="bg-white dark:bg-card-bg-dark rounded-material shadow-material p-8">
-           <div className="flex items-center gap-3 mb-4">
-              <Shield className="text-primary" size={28} />
-              <h2 className="text-[2.25rem] leading-[1.5em] text-gray-800 dark:text-white font-light mt-0">Why Matrix?</h2>
-           </div>
-           <div className="grid md:grid-cols-2 gap-8">
+      <section className="section">
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <div style={{ padding: '40px', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', marginBottom: '30px', borderLeft: '4px solid #167C80' }}>
+            <h2 style={{ marginBottom: '20px' }}>Registration Policy</h2>
+            <p style={{ color: '#666', lineHeight: 1.8, marginBottom: '15px' }}>
+              IQUXAe.org operates a private Matrix homeserver. Registration is by invitation only to maintain service quality and security.
+            </p>
+            <p style={{ color: '#666', lineHeight: 1.8 }}>
+              To request access, contact us at <a href="mailto:iquxae@proton.me">iquxae@proton.me</a> with your desired username.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginBottom: '30px' }}>
+            <div style={{ padding: '30px', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+              <h3 style={{ marginBottom: '15px', fontSize: '1.25rem' }}>🌐 Web Client</h3>
+              <p style={{ color: '#666', marginBottom: '20px', lineHeight: 1.6 }}>
+                Self-hosted Element Web instance optimized for IQUXAe homeserver.
+              </p>
+              <a href="https://element.iquxae.org" className="btn" target="_blank" rel="noopener noreferrer">Launch Client</a>
+            </div>
+
+            <div style={{ padding: '30px', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+              <h3 style={{ marginBottom: '15px', fontSize: '1.25rem' }}>👥 Community</h3>
+              <p style={{ color: '#666', marginBottom: '20px', lineHeight: 1.6 }}>
+                Contribute to our projects on GitHub or reach out via email.
+              </p>
+              <a href="https://github.com/IQUXAe" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div style={{ padding: '40px', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+            <h2 style={{ marginBottom: '20px' }}>Why Matrix?</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
               <div>
-                <h3 className="text-xl text-gray-800 dark:text-white font-normal mb-2">End-to-End Encryption</h3>
-                <p className="text-gray-600 dark:text-gray-400 font-light">
-                  All private conversations use end-to-end encryption by default. Messages are encrypted on your device and can only be read by intended recipients.
+                <h4 style={{ marginBottom: '10px', fontWeight: 500 }}>End-to-End Encryption</h4>
+                <p style={{ color: '#666', fontSize: '14px', lineHeight: 1.6 }}>
+                  All private conversations use E2EE by default. Messages are encrypted on your device.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl text-gray-800 dark:text-white font-normal mb-2">Federation</h3>
-                <p className="text-gray-600 dark:text-gray-400 font-light">
-                  IQUXAe homeserver federates with the global Matrix network, enabling communication with users on other Matrix servers worldwide.
+                <h4 style={{ marginBottom: '10px', fontWeight: 500 }}>Federation</h4>
+                <p style={{ color: '#666', fontSize: '14px', lineHeight: 1.6 }}>
+                  Communicate with users on other Matrix servers worldwide.
                 </p>
               </div>
-           </div>
-        </section>
-
-      </div>
-    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

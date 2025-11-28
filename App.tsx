@@ -9,6 +9,7 @@ import QuikxChat from './pages/QuikxChat';
 import Donate from './pages/Donate';
 import About from './pages/About';
 import Legal from './pages/Legal';
+import News from './pages/News';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
             <Route path="/matrix" element={<Matrix />} />
             <Route path="/matrix/guide" element={<MatrixGuide />} />
             <Route path="/quikxchat" element={<QuikxChat />} />
+            <Route path="/news" element={<News />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/about" element={<About />} />
             <Route path="/legal" element={<Legal />} />

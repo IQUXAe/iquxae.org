@@ -3,7 +3,7 @@ import React from 'react';
 const Donate: React.FC = () => {
   return (
     <>
-      <section style={{ background: '#167C80', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
+      <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
           <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>Support IQUXAe</h1>
           <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Help keep the servers running</p>
@@ -54,6 +54,17 @@ const Donate: React.FC = () => {
             <p>• Contribute code to our projects</p>
             <p>• Report bugs and share feedback</p>
           </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '80px 0', background: '#f8f9fa', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '700px' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '30px' }}>Thank You!</h2>
+          <p style={{ fontSize: '1.125rem', lineHeight: '1.8', color: '#666' }}>
+            Every contribution, no matter how small, makes a real difference. Your support helps us keep the servers online, 
+            maintain our services, and continue building open-source tools for the community. We're incredibly grateful 
+            for your generosity and belief in what we're doing. Thank you for being part of our journey!
+          </p>
         </div>
       </section>
     </>

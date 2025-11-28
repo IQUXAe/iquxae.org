@@ -77,12 +77,13 @@ const Navbar: React.FC = () => {
           gap: '30px',
           alignItems: 'center'
         }} className="nav-links">
-          <Link to="/" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#167C80'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Home</Link>
-          <Link to="/matrix" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#167C80'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Matrix</Link>
-          <Link to="/quikxchat" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#167C80'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>QuikxChat</Link>
-          <Link to="/donate" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#167C80'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Donate</Link>
-          <Link to="/about" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#167C80'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>About</Link>
-          <Link to="/legal" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#167C80'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Legal</Link>
+          <Link to="/" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Home</Link>
+          <Link to="/matrix" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Matrix</Link>
+          <Link to="/quikxchat" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>QuikxChat</Link>
+          <Link to="/news" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>News</Link>
+          <Link to="/donate" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Donate</Link>
+          <Link to="/about" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>About</Link>
+          <Link to="/legal" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Legal</Link>
         </div>
       </div>
 

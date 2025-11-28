@@ -6,7 +6,7 @@ const QuikxChat: React.FC = () => {
       <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginBottom: '15px' }}>
-            <img src="/logo2.png" alt="QuikxChat" style={{ width: '80px', height: '80px' }} />
+            <img src="/logo2.png" alt="QuikxChat" style={{ width: '80px', height: 'auto' }} />
             <h1 style={{ fontSize: '3.5rem', fontWeight: 300, margin: 0 }}>QuikxChat</h1>
           </div>
           <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Lightweight Matrix client</p>
@@ -22,7 +22,10 @@ const QuikxChat: React.FC = () => {
           <p style={{ fontSize: '1rem', lineHeight: '1.75rem', color: '#999', marginBottom: '40px' }}>
             Based on <a href="https://github.com/krille-chan/fluffychat" target="_blank" rel="noopener noreferrer" style={{ color: '#2C3E50' }}>FluffyChat</a> by Christian Pauly
           </p>
-          <a href="https://github.com/IQUXAe" className="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://quikxchat.iquxae.org" className="btn" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.1rem', padding: '15px 35px' }}>Official Website</a>
+            <a href="https://github.com/IQUXAe" target="_blank" rel="noopener noreferrer" style={{ padding: '15px 30px', color: '#666', textDecoration: 'none', border: '1px solid #ddd', borderRadius: '4px', transition: 'all 0.3s' }}>GitHub</a>
+          </div>
         </div>
       </section>
 

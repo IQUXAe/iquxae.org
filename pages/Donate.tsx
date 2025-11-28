@@ -3,49 +3,56 @@ import React from 'react';
 const Donate: React.FC = () => {
   return (
     <>
-      <section style={{ background: '#167C80', color: '#fff', padding: '80px 0', textAlign: 'center' }}>
+      <section style={{ background: '#167C80', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ marginBottom: '15px' }}>Support IQUXAe</h1>
-          <p style={{ fontSize: '1.125rem', fontWeight: 300 }}>Help keep the servers running</p>
+          <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>Support IQUXAe</h1>
+          <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Help keep the servers running</p>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container" style={{ maxWidth: '700px', textAlign: 'center' }}>
-          <div style={{ marginBottom: '50px' }}>
-            <div style={{ fontSize: '64px', marginBottom: '30px' }}>❤️</div>
-            <h2 style={{ marginBottom: '20px' }}>Donate via Donation Alerts</h2>
-            <p style={{ color: '#666', fontSize: '1.125rem', lineHeight: 1.8, marginBottom: '30px' }}>
-              IQUXAe.org is a non-commercial hobby project. Donations directly cover server hosting, domain renewals, and infrastructure costs.
-            </p>
-            <a href="https://dalink.to/iquxae" className="btn" target="_blank" rel="noopener noreferrer">Donate Now</a>
-          </div>
+      <section style={{ padding: '80px 0', background: '#fff', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '700px' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '30px' }}>Donate via Donation Alerts</h2>
+          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '40px' }}>
+            IQUXAe.org is a non-commercial hobby project. Donations directly cover server hosting, domain renewals, and infrastructure costs.
+          </p>
+          <a href="https://dalink.to/iquxae" className="btn" target="_blank" rel="noopener noreferrer">Donate Now</a>
+        </div>
+      </section>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', textAlign: 'center', marginBottom: '50px' }}>
-            <div style={{ padding: '20px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '10px' }}>🖥️</div>
-              <h4 style={{ fontSize: '14px', fontWeight: 500, marginBottom: '5px' }}>Infrastructure</h4>
-              <p style={{ fontSize: '13px', color: '#666' }}>VPS hosting and bandwidth</p>
+      <section style={{ padding: '80px 0', background: '#E0F6F7' }}>
+        <div className="container">
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px', textAlign: 'center' }}>Where does the money go?</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center' }}>
+              <h4 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>Infrastructure</h4>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555' }}>
+                VPS hosting and bandwidth
+              </p>
             </div>
-            <div style={{ padding: '20px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '10px' }}>🌐</div>
-              <h4 style={{ fontSize: '14px', fontWeight: 500, marginBottom: '5px' }}>Domains</h4>
-              <p style={{ fontSize: '13px', color: '#666' }}>Annual registration fees</p>
+            <div style={{ textAlign: 'center' }}>
+              <h4 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>Domains</h4>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555' }}>
+                Annual registration fees
+              </p>
             </div>
-            <div style={{ padding: '20px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '10px' }}>☕</div>
-              <h4 style={{ fontSize: '14px', fontWeight: 500, marginBottom: '5px' }}>Development</h4>
-              <p style={{ fontSize: '13px', color: '#666' }}>Time and resources</p>
+            <div style={{ textAlign: 'center' }}>
+              <h4 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>Development</h4>
+              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555' }}>
+                Time and resources
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div style={{ padding: '30px', background: '#f5f5f5', borderRadius: '8px', textAlign: 'left' }}>
-            <h3 style={{ marginBottom: '15px' }}>Other ways to support</h3>
-            <ul style={{ color: '#666', lineHeight: 2, paddingLeft: '20px' }}>
-              <li>Spread the word about decentralized communication</li>
-              <li>Contribute code to our projects</li>
-              <li>Report bugs and share feedback</li>
-            </ul>
+      <section style={{ padding: '80px 0', background: '#fff' }}>
+        <div className="container" style={{ maxWidth: '800px' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '30px', textAlign: 'center' }}>Other ways to support</h2>
+          <div style={{ fontSize: '1.125rem', lineHeight: '2', color: '#666' }}>
+            <p>• Spread the word about decentralized communication</p>
+            <p>• Contribute code to our projects</p>
+            <p>• Report bugs and share feedback</p>
           </div>
         </div>
       </section>

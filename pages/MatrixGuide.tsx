@@ -13,6 +13,11 @@ const MatrixGuide: React.FC = () => {
       <section style={{ padding: '80px 0', background: '#fff' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px' }}>Step 1: Request Access</h2>
+          <div style={{ background: '#fff3cd', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #ffc107', marginBottom: '30px' }}>
+            <p style={{ fontSize: '1rem', color: '#856404', margin: 0 }}>
+              ⚠️ By registering, you accept our <a href="/legal" style={{ color: '#856404', fontWeight: 500, textDecoration: 'underline' }}>Terms of Service and Privacy Policy</a>.
+            </p>
+          </div>
           <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '20px' }}>
             We'd love to have you! Send us a friendly email to request an account:
           </p>

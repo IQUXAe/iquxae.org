@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Matrix: React.FC = () => {
   return (
@@ -16,29 +17,31 @@ const Matrix: React.FC = () => {
           <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '20px' }}>
             IQUXAe.org operates a private Matrix homeserver. Registration is by invitation only to maintain service quality and security.
           </p>
-          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666' }}>
+          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '30px' }}>
             To request access, contact us at <a href="mailto:iquxae@proton.me">iquxae@proton.me</a> with your desired username.
           </p>
+          <Link to="/matrix/guide" className="btn">Registration Guide</Link>
         </div>
       </section>
 
       <section style={{ padding: '80px 0', background: '#E0F6F7' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>
-            <div>
-              <h3 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px' }}>Web Client</h3>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px', textAlign: 'center' }}>Web Clients</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center' }}>
+              <h3 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px' }}>Element Web</h3>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '30px' }}>
-                Self-hosted Element Web instance optimized for IQUXAe homeserver. Access full Matrix features directly in your browser.
+                Full-featured Matrix client with all features including voice/video calls.
               </p>
-              <a href="https://element.iquxae.org" className="btn" target="_blank" rel="noopener noreferrer">Launch Client</a>
+              <a href="https://element.iquxae.org" className="btn" target="_blank" rel="noopener noreferrer">Launch Element</a>
             </div>
 
-            <div>
-              <h3 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px' }}>Community</h3>
+            <div style={{ textAlign: 'center' }}>
+              <h3 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px' }}>QuikxChat Web</h3>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '30px' }}>
-                Contribute to our projects on GitHub or reach out via email to introduce yourself and request access.
+                Lightweight, fast Matrix client built for IQUXAe homeserver.
               </p>
-              <a href="https://github.com/IQUXAe" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://quikxchat.iquxae.org" className="btn" target="_blank" rel="noopener noreferrer">Launch QuikxChat</a>
             </div>
           </div>
         </div>

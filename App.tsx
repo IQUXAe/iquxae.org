@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Matrix from './pages/Matrix';
+import MatrixGuide from './pages/MatrixGuide';
 import QuikxChat from './pages/QuikxChat';
 import Donate from './pages/Donate';
 import About from './pages/About';
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/matrix" element={<Matrix />} />
+            <Route path="/matrix/guide" element={<MatrixGuide />} />
             <Route path="/quikxchat" element={<QuikxChat />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/about" element={<About />} />

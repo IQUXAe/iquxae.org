@@ -17,7 +17,7 @@ const Home: React.FC = () => {
             Privacy-focused services and open-source projects
           </p>
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/matrix" className="btn">Get Started</Link>
+            <Link to="/matrix" className="btn" style={{ background: '#fff', color: '#2C3E50', borderColor: '#fff' }}>Get Started</Link>
             <a href="https://github.com/IQUXAe" className="btn btn-secondary" style={{ color: '#fff', borderColor: '#fff' }}>GitHub</a>
           </div>
         </div>

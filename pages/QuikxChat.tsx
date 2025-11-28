@@ -24,7 +24,7 @@ const QuikxChat: React.FC = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="https://quikxchat.iquxae.org" className="btn" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.1rem', padding: '15px 35px' }}>Official Website</a>
-            <a href="https://github.com/IQUXAe" target="_blank" rel="noopener noreferrer" style={{ padding: '15px 30px', color: '#666', textDecoration: 'none', border: '1px solid #ddd', borderRadius: '4px', transition: 'all 0.3s' }}>GitHub</a>
+            <a href="https://github.com/IQUXAe" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.1rem', padding: '15px 35px' }}>GitHub</a>
           </div>
         </div>
       </section>

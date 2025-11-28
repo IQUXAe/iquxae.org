@@ -5,14 +5,11 @@ const QuikxChat: React.FC = () => {
     <>
       <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
-          <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>QuikxChat</h1>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginBottom: '15px' }}>
+            <img src="/logo2.png" alt="QuikxChat" style={{ width: '80px', height: '80px' }} />
+            <h1 style={{ fontSize: '3.5rem', fontWeight: 300, margin: 0 }}>QuikxChat</h1>
+          </div>
           <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Lightweight Matrix client</p>
-        </div>
-      </section>
-
-      <section style={{ padding: '80px 0', background: '#f8f9fa', textAlign: 'center' }}>
-        <div className="container" style={{ marginBottom: '40px' }}>
-          <img src="/logo2.png" alt="QuikxChat" style={{ maxWidth: '250px', height: 'auto' }} />
         </div>
       </section>
 

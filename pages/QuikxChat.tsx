@@ -3,18 +3,27 @@ import React from 'react';
 const QuikxChat: React.FC = () => {
   return (
     <>
-      <section style={{ background: '#167C80', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
+      <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
           <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>QuikxChat</h1>
           <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Lightweight Matrix client</p>
         </div>
       </section>
 
+      <section style={{ padding: '80px 0', background: '#f8f9fa', textAlign: 'center' }}>
+        <div className="container" style={{ marginBottom: '40px' }}>
+          <img src="/logo2.png" alt="QuikxChat" style={{ maxWidth: '250px', height: 'auto' }} />
+        </div>
+      </section>
+
       <section style={{ padding: '80px 0', background: '#fff', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '30px' }}>Fast. Simple. Open.</h2>
-          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '40px' }}>
+          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '20px' }}>
             QuikxChat is a Flutter-based Matrix client focused on speed and simplicity. Built to provide essential communication features without the bloat.
+          </p>
+          <p style={{ fontSize: '1rem', lineHeight: '1.75rem', color: '#999', marginBottom: '40px' }}>
+            Based on <a href="https://github.com/krille-chan/fluffychat" target="_blank" rel="noopener noreferrer" style={{ color: '#2C3E50' }}>FluffyChat</a> by Christian Pauly
           </p>
           <a href="https://github.com/IQUXAe" className="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
@@ -48,7 +57,7 @@ const QuikxChat: React.FC = () => {
             <p><strong>Matrix SDK:</strong> matrix-dart-sdk for Matrix protocol integration</p>
             <p><strong>Encryption:</strong> Supports end-to-end encryption via Olm/Megolm</p>
             <p><strong>Federation:</strong> Compatible with any Matrix homeserver</p>
-            <p><strong>Platforms:</strong> Android and iOS support</p>
+            <p><strong>Platforms:</strong> Android, Windows, Linux, and Web</p>
           </div>
         </div>
       </section>

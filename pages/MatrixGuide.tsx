@@ -3,7 +3,7 @@ import React from 'react';
 const MatrixGuide: React.FC = () => {
   return (
     <>
-      <section style={{ background: '#167C80', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
+      <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
           <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>Getting Started</h1>
           <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Join our Matrix community in 3 easy steps</p>
@@ -17,9 +17,9 @@ const MatrixGuide: React.FC = () => {
             We'd love to have you! Send us a friendly email to request an account:
           </p>
           <p style={{ fontSize: '1.25rem', marginBottom: '30px' }}>
-            <a href="mailto:iquxae@proton.me" style={{ color: '#167C80', fontWeight: 500 }}>iquxae@proton.me</a>
+            <a href="mailto:iquxae@proton.me" style={{ color: '#2C3E50', fontWeight: 500 }}>iquxae@proton.me</a>
           </p>
-          <div style={{ background: '#f5f5f5', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #167C80' }}>
+          <div style={{ background: '#f5f5f5', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #2C3E50' }}>
             <p style={{ fontSize: '1rem', color: '#666', marginBottom: '10px', fontWeight: 500 }}>Email Template:</p>
             <p style={{ fontSize: '1rem', color: '#666', lineHeight: '1.8', fontFamily: 'monospace' }}>
               Subject: Matrix Account Request<br/><br/>
@@ -31,7 +31,7 @@ const MatrixGuide: React.FC = () => {
         </div>
       </section>
 
-      <section style={{ padding: '80px 0', background: '#E0F6F7' }}>
+      <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px' }}>Step 2: Pick Your Client</h2>
           <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '40px' }}>
@@ -68,7 +68,7 @@ const MatrixGuide: React.FC = () => {
           <div style={{ fontSize: '1.125rem', lineHeight: '2', color: '#666' }}>
             <p><strong>1.</strong> Open your chosen client (Element or QuikxChat)</p>
             <p><strong>2.</strong> Click "Register" or "Create Account"</p>
-            <p><strong>3.</strong> Enter homeserver: <code style={{ background: '#f5f5f5', padding: '4px 8px', borderRadius: '4px', color: '#167C80' }}>iquxae.org</code></p>
+            <p><strong>3.</strong> Enter homeserver: <code style={{ background: '#f5f5f5', padding: '4px 8px', borderRadius: '4px', color: '#2C3E50' }}>iquxae.org</code></p>
             <p><strong>4.</strong> Enter your desired username and password</p>
             <p><strong>5.</strong> Use the one-time registration token we sent you via email</p>
             <p><strong>6.</strong> Complete registration and you're in!</p>
@@ -76,21 +76,21 @@ const MatrixGuide: React.FC = () => {
         </div>
       </section>
 
-      <section style={{ padding: '80px 0', background: '#E0F6F7' }}>
+      <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px' }}>Mobile & Desktop Apps</h2>
           <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '30px' }}>
             Want Matrix on the go? We've got you covered:
           </p>
           <div style={{ fontSize: '1.125rem', lineHeight: '2', color: '#555' }}>
-            <p><strong>Android:</strong> Element (Google Play / F-Droid) or <a href="https://quikxchat.iquxae.org" target="_blank" rel="noopener noreferrer" style={{ color: '#167C80' }}>QuikxChat</a></p>
+            <p><strong>Android:</strong> Element (Google Play / F-Droid) or <a href="https://quikxchat.iquxae.org" target="_blank" rel="noopener noreferrer" style={{ color: '#2C3E50' }}>QuikxChat</a></p>
             <p><strong>iOS:</strong> Element (App Store)</p>
-            <p><strong>Windows:</strong> Element Desktop or <a href="https://quikxchat.iquxae.org" target="_blank" rel="noopener noreferrer" style={{ color: '#167C80' }}>QuikxChat</a></p>
-            <p><strong>Linux:</strong> Element Desktop or <a href="https://quikxchat.iquxae.org" target="_blank" rel="noopener noreferrer" style={{ color: '#167C80' }}>QuikxChat</a></p>
+            <p><strong>Windows:</strong> Element Desktop or <a href="https://quikxchat.iquxae.org" target="_blank" rel="noopener noreferrer" style={{ color: '#2C3E50' }}>QuikxChat</a></p>
+            <p><strong>Linux:</strong> Element Desktop or <a href="https://quikxchat.iquxae.org" target="_blank" rel="noopener noreferrer" style={{ color: '#2C3E50' }}>QuikxChat</a></p>
             <p><strong>macOS:</strong> Element Desktop</p>
           </div>
           <p style={{ fontSize: '1rem', color: '#666', marginTop: '30px' }}>
-            Just use <code style={{ background: '#fff', padding: '4px 8px', borderRadius: '4px', color: '#167C80' }}>iquxae.org</code> as your homeserver when setting up!
+            Just use <code style={{ background: '#fff', padding: '4px 8px', borderRadius: '4px', color: '#2C3E50' }}>iquxae.org</code> as your homeserver when setting up!
           </p>
         </div>
       </section>

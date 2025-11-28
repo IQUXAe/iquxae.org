@@ -20,7 +20,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      <section style={{ padding: '80px 0', background: '#E0F6F7' }}>
+      <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container">
           <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px', textAlign: 'center' }}>Where does the money go?</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', maxWidth: '900px', margin: '0 auto' }}>

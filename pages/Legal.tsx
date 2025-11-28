@@ -3,7 +3,7 @@ import React from 'react';
 const Legal: React.FC = () => {
   return (
     <>
-      <section style={{ background: '#167C80', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
+      <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
           <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>Legal</h1>
           <p style={{ fontSize: '1.25rem', fontWeight: 300 }}>Terms of Service and Privacy Policy</p>
@@ -43,7 +43,7 @@ const Legal: React.FC = () => {
         </div>
       </section>
 
-      <section style={{ padding: '80px 0', background: '#E0F6F7' }}>
+      <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px' }}>Privacy Policy</h2>
           

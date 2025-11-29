@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           color: '#212121',
           letterSpacing: '0.5px'
         }}>
-          IQUXAe
+          IQUXAe.org
         </Link>
 
         <button

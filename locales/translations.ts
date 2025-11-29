@@ -138,17 +138,17 @@ export const translations = {
       platformsDesc: 'Android, Windows, Linux, and Web'
     },
     about: {
-      title: 'About IQUXAe',
+      title: 'About IQUXAe.org'
       subtitle: 'The philosophy behind the project',
       whatTitle: 'What is IQUXAe.org?',
       whatDesc: 'IQUXAe.org is a personal infrastructure project hosting privacy-focused services and open-source experiments. Home to a private Matrix homeserver and QuikxChat development.',
       philTitle: 'The Philosophy',
-      philDesc: 'Built on principles of decentralization, privacy, and open-source software. IQUXAe promotes protocol-based communication over centralized platforms.',
+      philDesc: 'Built on principles of decentralization, privacy, and open-source software. IQUXAe.org promotes protocol-based communication over centralized platforms.'
       whoTitle: 'Who runs it?',
       whoDesc: 'IQUXAe.org is maintained as a hobby project by one person passionate about privacy, decentralization, and open-source development.'
     },
     donate: {
-      title: 'Support IQUXAe',
+      title: 'Support IQUXAe.org'
       subtitle: 'Help keep the servers running',
       donateTitle: 'Donate via Donation Alerts',
       donateDesc: 'IQUXAe.org is a non-commercial hobby project. Donations directly cover server hosting, domain renewals, and infrastructure costs.',
@@ -169,7 +169,7 @@ export const translations = {
     },
     news: {
       title: 'News',
-      subtitle: 'Latest updates from IQUXAe',
+      subtitle: 'Latest updates from IQUXAe.org'
       item1Title: 'Website Redesign Complete',
       item1Date: 'November 28, 2025',
       item1Desc: "We've completely redesigned IQUXAe.org with a fresh new look! The site now features a cleaner interface, better navigation, and improved mobile support. We've also added a comprehensive registration guide to help new users join our Matrix homeserver.",
@@ -320,17 +320,17 @@ export const translations = {
       platformsDesc: 'Android, Windows, Linux и Web'
     },
     about: {
-      title: 'О IQUXAe',
+      title: 'О IQUXAe.org'
       subtitle: 'Философия проекта',
       whatTitle: 'Что такое IQUXAe.org?',
       whatDesc: 'IQUXAe.org - это личный инфраструктурный проект, размещающий сервисы с фокусом на приватность и эксперименты с открытым исходным кодом. Дом для приватного Matrix homeserver и разработки QuikxChat.',
       philTitle: 'Философия',
-      philDesc: 'Построен на принципах децентрализации, приватности и программного обеспечения с открытым исходным кодом. IQUXAe продвигает коммуникацию на основе протоколов вместо централизованных платформ.',
+      philDesc: 'Построен на принципах децентрализации, приватности и программного обеспечения с открытым исходным кодом. IQUXAe.org продвигает коммуникацию на основе протоколов вместо централизованных платформ.'
       whoTitle: 'Кто управляет?',
       whoDesc: 'IQUXAe.org поддерживается как хобби-проект одним человеком, увлеченным приватностью, децентрализацией и разработкой с открытым исходным кодом.'
     },
     donate: {
-      title: 'Поддержать IQUXAe',
+      title: 'Поддержать IQUXAe.org'
       subtitle: 'Помогите поддерживать работу серверов',
       donateTitle: 'Пожертвовать через Donation Alerts',
       donateDesc: 'IQUXAe.org - это некоммерческий хобби-проект. Пожертвования напрямую покрывают хостинг серверов, продление доменов и расходы на инфраструктуру.',
@@ -351,7 +351,7 @@ export const translations = {
     },
     news: {
       title: 'Новости',
-      subtitle: 'Последние обновления от IQUXAe',
+      subtitle: 'Последние обновления от IQUXAe.org'
       item1Title: 'Редизайн сайта завершен',
       item1Date: '28 ноября 2025',
       item1Desc: 'Мы полностью переработали IQUXAe.org с новым дизайном! Сайт теперь имеет более чистый интерфейс, улучшенную навигацию и улучшенную поддержку мобильных устройств. Мы также добавили подробное руководство по регистрации, чтобы помочь новым пользователям присоединиться к нашему Matrix homeserver.',

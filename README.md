@@ -27,3 +27,10 @@ Personal website for IQUXAe services and projects.
 - QuikxChat project showcase
 - LineageOS-inspired design
 - Dark mode support
+- Multi-language support (EN/RU)
+
+## Deployment
+
+The site is deployed on:
+- GitHub Pages
+- Cloudflare Workers

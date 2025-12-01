@@ -1,0 +1,7 @@
+{
+  "name": "iquxae-org",
+  "compatibility_date": "2025-12-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

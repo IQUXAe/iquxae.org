@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.pageYOffset;
-      
+
       if (currentScroll > 100) {
         setScrolled(true);
         if (currentScroll > lastScroll && currentScroll > 200) {
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
         setScrolled(false);
         setHidden(false);
       }
-      
+
       setLastScroll(currentScroll);
     };
 
@@ -60,33 +60,14 @@ const Navbar: React.FC = () => {
           IQUXAe.org
         </Link>
 
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          style={{
-            display: 'none',
-            background: 'none',
-            border: 'none',
-            fontSize: '24px',
-            cursor: 'pointer',
-            color: '#212121'
-          }}
-          className="mobile-menu-btn"
-        >
-          ☰
-        </button>
-
         <div style={{
           display: 'flex',
           gap: '30px',
           alignItems: 'center'
         }} className="nav-links">
-          <Link to="/" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'Home' : 'Главная'}</Link>
-          <Link to="/matrix" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>Matrix</Link>
-          <Link to="/quikxchat" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>QuikxChat</Link>
-          <Link to="/news" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'News' : 'Новости'}</Link>
+          <Link to="/contact" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'Contacts' : 'Контакты'}</Link>
           <Link to="/donate" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'Donate' : 'Поддержать'}</Link>
           <Link to="/about" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'About' : 'О нас'}</Link>
-          <Link to="/legal" style={{ fontSize: '15px', fontWeight: 400, color: '#555', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'Legal' : 'Правовая информация'}</Link>
           <div style={{ position: 'relative' }}>
             <button onClick={() => setLangOpen(!langOpen)} style={{ fontSize: '15px', fontWeight: 500, color: '#555', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.2s', fontFamily: 'Roboto, sans-serif', letterSpacing: '0.5px' }} onMouseOver={(e) => e.currentTarget.style.color = '#2C3E50'} onMouseOut={(e) => e.currentTarget.style.color = '#555'}>{language === 'en' ? 'EN' : 'RU'} ▾</button>
             {langOpen && (

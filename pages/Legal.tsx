@@ -5,9 +5,17 @@ import { translations } from '../locales/translations';
 const Legal: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language].legal;
-  
+
+  const SectionBlock = ({ title, text }: { title: string, text: string }) => (
+    <div style={{ marginBottom: '30px' }}>
+      <h4 style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '10px', color: '#2C3E50' }}>{title}</h4>
+      <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#555' }}>{text}</p>
+    </div>
+  );
+
   return (
     <>
+      {/* Hero */}
       <section style={{ background: '#2C3E50', color: '#fff', padding: '100px 0', textAlign: 'center' }}>
         <div className="container">
           <h1 style={{ marginBottom: '15px', fontSize: '3.5rem', fontWeight: 300 }}>{t.title}</h1>
@@ -17,102 +25,47 @@ const Legal: React.FC = () => {
 
       <section style={{ padding: '80px 0', background: '#fff' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px' }}>{t.tosTitle}</h2>
-          
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.disclaimerTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666' }}>
-              {t.disclaimerText}
-            </p>
+
+          {/* General Section */}
+          <div style={{ marginBottom: '60px' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px', paddingBottom: '15px', borderBottom: '1px solid #eee' }}>{t.general.title}</h2>
+            <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '30px', fontStyle: 'italic' }}>{t.general.intro}</p>
+
+            <SectionBlock title={t.general.statusTitle} text={t.general.statusText} />
+            <SectionBlock title={t.general.liabilityTitle} text={t.general.liabilityText} />
+            <SectionBlock title={t.general.jurisdictionTitle} text={t.general.jurisdictionText} />
+            <SectionBlock title={t.general.changesTitle} text={t.general.changesText} />
           </div>
 
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.termsTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '15px' }}>
-              {t.termsText1}
-            </p>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666' }}>
-              {t.termsText2} <a href="mailto:iquxae@proton.me">iquxae@proton.me</a>.
-            </p>
+          {/* Matrix Section */}
+          <div style={{ marginBottom: '60px' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px', paddingBottom: '15px', borderBottom: '1px solid #eee' }}>{t.matrix.title}</h2>
+            <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '30px', fontStyle: 'italic' }}>{t.matrix.intro}</p>
+
+            <SectionBlock title={t.matrix.accessTitle} text={t.matrix.accessText} />
+            <SectionBlock title={t.matrix.privacyTitle} text={t.matrix.privacyText} />
+            <SectionBlock title={t.matrix.federationTitle} text={t.matrix.federationText} />
+            <SectionBlock title={t.matrix.rulesTitle} text={t.matrix.rulesText} />
           </div>
 
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.availTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666' }}>
-              {t.availText}
-            </p>
+          {/* Services Section */}
+          <div style={{ marginBottom: '60px' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '20px', paddingBottom: '15px', borderBottom: '1px solid #eee' }}>{t.services.title}</h2>
+            <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '30px', fontStyle: 'italic' }}>{t.services.intro}</p>
+
+            <SectionBlock title={t.services.contentTitle} text={t.services.contentText} />
+            <SectionBlock title={t.services.fairUseTitle} text={t.services.fairUseText} />
+            <SectionBlock title={t.services.userContentTitle} text={t.services.userContentText} />
           </div>
 
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.locationTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '15px' }}>
-              {t.locationText1}
+          {/* Contact Footer */}
+          <div style={{ marginTop: '60px', padding: '30px', background: '#f8f9fa', borderRadius: '8px', textAlign: 'center' }}>
+            <p style={{ fontSize: '1.1rem', color: '#2C3E50', marginBottom: '10px' }}>
+              <strong>{t.contact}</strong> <a href="mailto:iquxae@proton.me" style={{ color: '#2C3E50', textDecoration: 'underline' }}>iquxae@proton.me</a>
             </p>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666' }}>
-              {t.locationText2}
-            </p>
+            <p style={{ fontSize: '0.9rem', color: '#999' }}>{t.lastUpdated}</p>
           </div>
 
-          <div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.liabilityTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666' }}>
-              {t.liabilityText}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
-        <div className="container" style={{ maxWidth: '900px' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px' }}>{t.privacyTitle}</h2>
-          
-          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '40px' }}>
-            {t.privacyIntro}
-          </p>
-
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.infoCollectTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', whiteSpace: 'pre-line' }}>
-              {t.infoCollectText}
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.infoUseTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', whiteSpace: 'pre-line' }}>
-              {t.infoUseText}
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.e2eTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555' }}>
-              {t.e2eText}
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.shareTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', whiteSpace: 'pre-line' }}>
-              {t.shareText}
-            </p>
-          </div>
-
-          <div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 400, marginBottom: '15px' }}>{t.rightsTitle}</h3>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '15px', whiteSpace: 'pre-line' }}>
-              {t.rightsText1}
-            </p>
-            <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555' }}>
-              {t.rightsText2} <a href="mailto:iquxae@proton.me">iquxae@proton.me</a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: '40px 0', background: '#fff', textAlign: 'center' }}>
-        <div className="container">
-          <p style={{ fontSize: '14px', color: '#999' }}>{t.lastUpdated}</p>
         </div>
       </section>
     </>

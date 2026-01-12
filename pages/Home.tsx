@@ -2,97 +2,91 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../locales/translations';
+import { Server, Newspaper, Scale } from 'lucide-react';
 
 const Home: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language].home;
-  const tn = translations[language].nav;
-  
+  const nav = translations[language].nav;
+
+  const menuItems = [
+    { path: '/matrix', label: nav.matrix, icon: <Server size={42} strokeWidth={1.5} />, desc: t.matrixTitle },
+    { path: '/blog', label: nav.blog, icon: <Newspaper size={42} strokeWidth={1.5} />, desc: t.newsTitle }
+  ];
+
   return (
     <>
       {/* Hero */}
       <section style={{
         background: 'linear-gradient(135deg, #2C3E50 0%, #1a252f 100%)',
         color: '#fff',
-        padding: '100px 0',
+        padding: '120px 0 80px',
         textAlign: 'center'
       }}>
         <div className="container">
           <h1 style={{ marginBottom: '20px', fontSize: '3.5rem', fontWeight: 300 }}>{t.title}</h1>
-          <p style={{ fontSize: '1.25rem', fontWeight: 300, marginBottom: '40px' }}>
+          <p style={{ fontSize: '1.25rem', fontWeight: 300, marginBottom: '40px', maxWidth: '600px', margin: '0 auto' }}>
             {t.subtitle}
           </p>
-          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/matrix" className="btn" style={{ background: '#fff', color: '#2C3E50', borderColor: '#fff' }}>{t.getStarted}</Link>
-            <a href="https://github.com/IQUXAe" className="btn btn-secondary" style={{ color: '#fff', borderColor: '#fff' }}>{t.github}</a>
-          </div>
         </div>
       </section>
 
-      {/* Matrix Section */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
-        <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1', minWidth: '300px' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '20px' }}>{t.matrixTitle}</h2>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#666', marginBottom: '30px' }}>
-                {t.matrixDesc}
-              </p>
-              <Link to="/matrix" className="btn">{t.learnMore}</Link>
-            </div>
-            <div style={{ flex: '1', minWidth: '300px', textAlign: 'center' }}>
-              <svg width="300" height="300" viewBox="0 0 24 24" fill="#2C3E50">
-                <path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* QuikxChat Section */}
-      <section style={{ padding: '80px 0', background: '#f8f9fa' }}>
-        <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px', flexWrap: 'wrap', flexDirection: 'row-reverse' }}>
-            <div style={{ flex: '1', minWidth: '300px' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '20px' }}>{t.quikxchatTitle}</h2>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', color: '#555', marginBottom: '30px' }}>
-                {t.quikxchatDesc}
-              </p>
-              <Link to="/quikxchat" className="btn">{t.explore}</Link>
-            </div>
-            <div style={{ flex: '1', minWidth: '300px', textAlign: 'center' }}>
-              <img src="/logo2.png" alt="QuikxChat" style={{ maxWidth: '300px', height: 'auto' }} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section style={{ padding: '80px 0', background: '#2C3E50', color: '#fff', textAlign: 'center' }}>
-        <div className="container">
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '20px' }}>{t.supportTitle}</h2>
-          <p style={{ fontSize: '1.125rem', lineHeight: '1.75rem', marginBottom: '40px', maxWidth: '700px', margin: '0 auto 40px' }}>
-            {t.supportDesc}
-          </p>
-          <Link to="/donate" className="btn" style={{ background: '#fff', color: '#2C3E50', borderColor: '#fff' }}>{t.donateBtn}</Link>
-        </div>
-      </section>
-
-      {/* Latest News */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
-        <div className="container">
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 300, marginBottom: '40px', textAlign: 'center' }}>{t.newsTitle}</h2>
+      {/* Navigation Grid */}
+      <section style={{ padding: '60px 0', background: '#f8f9fa', minHeight: '60vh' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 300, marginBottom: '40px', color: '#2C3E50' }}>{t.gridTitle}</h2>
           <div style={{
-            maxWidth: '800px',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '30px',
+            maxWidth: '1100px',
             margin: '0 auto',
-            padding: '40px 0'
+            position: 'relative',
+            zIndex: 10,
+            textAlign: 'left'
           }}>
-            <h3 style={{ color: '#2C3E50', marginBottom: '10px', fontSize: '1.5rem', fontWeight: 400 }}>{t.newsItemTitle}</h3>
-            <p style={{ fontSize: '14px', color: '#999', marginBottom: '20px' }}>{t.newsItemDate}</p>
-            <p style={{ color: '#666', lineHeight: 1.8, fontSize: '1.125rem', marginBottom: '30px' }}>
-              {t.newsItemDesc}
-            </p>
-            <Link to="/news" style={{ fontSize: '14px', fontWeight: 500 }}>{t.readAll}</Link>
+            {menuItems.map((item, index) => (
+              <Link to={item.path} key={index} style={{
+                background: '#fff',
+                padding: '50px 30px',
+                borderRadius: '12px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                textAlign: 'center',
+                transition: 'all 0.3s ease',
+                border: '1px solid rgba(0,0,0,0.03)'
+              }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+                }}
+              >
+                <div style={{
+                  color: '#2C3E50',
+                  marginBottom: '25px',
+                  background: '#f0f4f8',
+                  padding: '20px',
+                  borderRadius: '50%',
+                  display: 'inline-flex'
+                }}>
+                  {item.icon}
+                </div>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 500, marginBottom: '15px', color: '#2C3E50' }}>
+                  {item.label}
+                </h3>
+                <p style={{ fontSize: '1rem', color: '#666', lineHeight: 1.6, margin: 0 }}>
+                  {item.desc}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

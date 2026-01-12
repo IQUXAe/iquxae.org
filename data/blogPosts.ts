@@ -10,41 +10,35 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
-        id: '1',
-        slug: 'firebase-voip-update',
-        title: {
-            en: 'Added Firebase Messaging and VoIP Calls Testing!',
-            ru: 'Добавлены Firebase Messaging и VoIP-звонки!'
-        },
-        date: '2025-12-11',
-        excerpt: {
-            en: 'We have restored Firebase Messaging support and implemented initial VoIP calling functionality in QuikxChat/Elements.',
-            ru: 'Мы восстановили поддержку Firebase Messaging и реализовали начальную функциональность VoIP-звонков.'
-        },
-        content: {
-            en: `<p>After a long time, I decided to bring back the calling feature from the FluffyChat base. It's currently under development, but the main functionality has been implemented.</p>
-           <p>I also restored Firebase Messaging (with the ability to switch to UnifiedPush and vice versa) and set up VoIP and Firebase Messaging on my server <a href="./#/matrix">iquxae.org</a>.</p>`,
-            ru: `<p>Спустя долгое время я решил вернуть функцию звонков из основы FluffyChat. Сейчас она находится на стадии разработки, но основная функциональность уже реализована.</p>
-           <p>Также я вернул Firebase Messaging (с возможностью переключения на UnifiedPush и обратно) и настроил VoIP и Firebase Messaging на своём сервере <a href="./#/matrix">iquxae.org</a>.</p>`
-        }
-    },
-    {
-        id: '2',
-        slug: 'website-redesign',
+        id: '2026-redesign',
+        slug: 'website-redesign-2026',
         title: {
             en: 'Website Redesign Complete',
             ru: 'Редизайн сайта завершен'
         },
-        date: '2025-11-28',
+        date: '2026-01-12',
         excerpt: {
-            en: "We've completely redesigned IQUXAe.org with a fresh new look!",
-            ru: 'Мы полностью переработали IQUXAe.org с новым дизайном!'
+            en: "We've completely redesigned IQUXAe.org with a fresh new look and new features.",
+            ru: 'Мы полностью переработали IQUXAe.org, обновив дизайн и добавив новые функции.'
         },
         content: {
-            en: `<p>The site now features a cleaner interface, better navigation, and improved mobile support. We've also added a comprehensive registration guide to help new users join our Matrix homeserver.</p>`,
-            ru: `<p>Сайт теперь имеет более чистый интерфейс, улучшенную навигацию и улучшенную поддержку мобильных устройств. Мы также добавили подробное руководство по регистрации.</p>`
+            en: `<p>We are happy to announce the completion of the IQUXAe.org redesign! The update includes:</p>
+            <ul>
+                <li><strong>New Design:</strong> A cleaner, more personal look.</li>
+                <li><strong>Blog System:</strong> A new way to share updates.</li>
+                <li><strong>Contacts Page:</strong> Easier ways to get in touch via Matrix and Telegram.</li>
+                <li><strong>Donation Section:</strong> Simplified and added cryptocurrency support.</li>
+            </ul>`,
+            ru: `<p>Мы рады объявить о завершении редизайна IQUXAe.org! Обновление включает:</p>
+            <ul>
+                <li><strong>Новый дизайн:</strong> Более чистый и личный вид.</li>
+                <li><strong>Система блога:</strong> Новый способ делиться новостями.</li>
+                <li><strong>Страница контактов:</strong> Удобные способы связи через Matrix и Telegram.</li>
+                <li><strong>Раздел донатов:</strong> Упрощен и добавлена поддержка криптовалют.</li>
+            </ul>`
         }
     },
+
     {
         id: '3',
         slug: 'matrix-launch',

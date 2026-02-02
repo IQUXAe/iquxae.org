@@ -30,15 +30,9 @@ app.get('/.well-known/matrix/client', (c) => {
     }, 200, corsHeaders)
 })
 
-app.all('*', async (c) => {
-    try {
-        if (!c.env.ASSETS) {
-            return c.text('Error: ASSETS binding is undefined. Available bindings: ' + JSON.stringify(Object.keys(c.env)), 500);
-        }
-        return await c.env.ASSETS.fetch(c.req.raw)
-    } catch (e) {
-        return c.text('Internal Server Error: ' + e, 500)
-    }
-})
+// app.all('*') catch-all removed. 
+// We rely on Cloudflare's default behavior for static assets or specific matching.
+// If this returns 404 for assets, we confirmed ASSETS binding is missing and need another strategy.
+
 
 export default app

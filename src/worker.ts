@@ -32,6 +32,9 @@ app.get('/.well-known/matrix/client', (c) => {
 
 app.all('*', async (c) => {
     try {
+        if (!c.env.ASSETS) {
+            return c.text('Error: ASSETS binding is undefined. Available bindings: ' + JSON.stringify(Object.keys(c.env)), 500);
+        }
         return await c.env.ASSETS.fetch(c.req.raw)
     } catch (e) {
         return c.text('Internal Server Error: ' + e, 500)

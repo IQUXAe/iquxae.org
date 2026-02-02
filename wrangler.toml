@@ -1,4 +1,4 @@
-name = "iquxae-org"
+name = "iquxaemain"
 compatibility_date = "2024-04-01"
 main = "src/worker.ts"
 assets = { directory = "./dist" }

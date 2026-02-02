@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | IQUXAe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="logo"><a href="/">IQUXAe<span class="dot">.</span></a></div>
+            <nav class="nav">
+                <a href="/#projects">Projects</a>
+                <a href="/donate.html" class="active">Donate</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main class="page-container">
+            <section class="content-section">
+                <h1 class="page-title">Support My Work</h1>
+                <p class="page-subtitle">If you find my projects useful, consider supporting me via crypto.</p>
+
+                <div class="crypto-grid">
+
+                    <!-- Bitcoin -->
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <span class="crypto-icon btc">₿</span>
+                            <h3>Bitcoin (BTC)</h3>
+                        </div>
+                        <div class="crypto-address-box">
+                            <code id="btc-addr">bc1qxfx8w2ffvqaesy2z948e7vwavsep7rtncupz4y</code>
+                            <button class="copy-btn" onclick="copyToClipboard('btc-addr')">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Litecoin -->
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <span class="crypto-icon ltc">Ł</span>
+                            <h3>Litecoin (LTC)</h3>
+                        </div>
+                        <div class="crypto-address-box">
+                            <code id="ltc-addr">ltc1q3na0naesvx48qv9wgsqlhsqmzvc5ca08dj6995</code>
+                            <button class="copy-btn" onclick="copyToClipboard('ltc-addr')">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Monero -->
+                    <div class="crypto-card">
+                        <div class="crypto-header">
+                            <span class="crypto-icon xmr">M</span>
+                            <h3>Monero (XMR)</h3>
+                        </div>
+                        <div class="crypto-address-box">
+                            <code
+                                id="xmr-addr">88DgCMakzzpDckk8sS3Rjw41QQvYLKgJd16rgAM7iBopDvqX6wpfa2MND8H482KYfMBc3iVNkZjVThx19JjctbsL89t3dVm</code>
+                            <button class="copy-btn" onclick="copyToClipboard('xmr-addr')">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>IQUXAe<span class="dot">.</span></h4>
+                    <p>Code, logic, and creativity merged into one.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IQUXAe. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Address copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+
+</html>

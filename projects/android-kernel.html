@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>android_kernel_sony | IQUXAe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="logo"><a href="/">IQUXAe<span class="dot">.</span></a></div>
+            <nav class="nav">
+                <a href="/#projects">Projects</a>
+                <a href="/donate.html">Donate</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main class="project-page" data-js-repo="IQUXAe/android_kernel_sony_sm8250">
+            <!-- Project Header -->
+            <div class="project-header-container">
+                <div class="project-breadcrumb">
+                    <a href="/">IQUXAe</a>
+                    <span class="separator">/</span>
+                    <span class="current">android_kernel_sony</span>
+                </div>
+                <div class="project-title-row">
+                    <h1>android_kernel_sony_sm8250</h1>
+                    <span class="badget public">Public</span>
+                </div>
+                <p class="project-subtitle">Custom kernel implementation for Sony Xperia (SM8250) devices.</p>
+
+                <div class="project-actions">
+                    <a href="https://github.com/IQUXAe/android_kernel_sony_sm8250" target="_blank"
+                        class="btn secondary small">
+                        <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"
+                            fill="currentColor">
+                            <path
+                                d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                            </path>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Content Layout -->
+            <div class="project-content-grid">
+                <!-- Main Content (Readme style) -->
+                <article class="project-readme">
+                    <h2>Sony Xperia SM8250 Kernel</h2>
+                    <p>
+                        This repository contains the Linux kernel source code for Sony Xperia devices based on the
+                        Qualcomm SM8250 platform.
+                        This includes the Xperia 1 II (pdx203) and Xperia 5 II (pdx206).
+                    </p>
+
+                    <h3>Compatibility</h3>
+                    <ul>
+                        <li><strong>LineageOS:</strong> Fully compatible with LineageOS 20/21.</li>
+                        <li><strong>AOSP:</strong> Should work with generic AOSP builds with minimal changes.</li>
+                    </ul>
+
+                    <h3>Build Instructions</h3>
+                    <div class="code-block">
+                        <code>export CROSS_COMPILE=aarch64-linux-android-
+export ARCH=arm64
+make edo_defconfig
+make -j$(nproc)</code>
+                    </div>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Upstreamed to latest Linux stable</li>
+                        <li>WireGuard support</li>
+                        <li>Optimized scheduler settings for battery life</li>
+                        <li>KSU (KernelSU) support integrated</li>
+                    </ul>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>About</h3>
+                        <p>Kernel source for Sony Xperia 1 II / 5 II.</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Languages</h3>
+                        <div class="language-bar" id="js-lang-bar">
+                            <span style="width: 80%; background-color: #3572A5;"></span>
+                            <span style="width: 15%; background-color: #f1e05a;"></span>
+                            <span style="width: 5%; background-color: #ededed;"></span>
+                        </div>
+                        <div class="language-list" id="js-lang-list">
+                            <div class="lang-item"><span class="dot" style="color: #3572A5">●</span> C 80%</div>
+                            <div class="lang-item"><span class="dot" style="color: #f1e05a">●</span> Assembly 15%</div>
+                            <div class="lang-item"><span class="dot" style="color: #ededed">●</span> Makefile 5%</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>License</h3>
+                        <div class="license-info">
+                            <span id="js-license-text">GPL-2.0 license</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+        </main>
+
+        <footer id="contact" class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>IQUXAe<span class="dot">.</span></h4>
+                    <p>Code, logic, and creativity merged into one.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IQUXAe. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

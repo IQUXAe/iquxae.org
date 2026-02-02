@@ -30,8 +30,12 @@ app.get('/.well-known/matrix/client', (c) => {
     }, 200, corsHeaders)
 })
 
-app.get('*', async (c) => {
-    return c.env.ASSETS.fetch(c.req.raw)
+app.all('*', async (c) => {
+    try {
+        return await c.env.ASSETS.fetch(c.req.raw)
+    } catch (e) {
+        return c.text('Internal Server Error: ' + e, 500)
+    }
 })
 
 export default app
